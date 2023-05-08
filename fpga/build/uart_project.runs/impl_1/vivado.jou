@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon May  8 19:26:51 2023
+# Process ID: 15037
+# Current directory: /home/student/pzieba/UEC2/UEC2_LAB2/fpga/build/uart_project.runs/impl_1
+# Command line: vivado -log top_uart_basys3.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_uart_basys3.tcl -notrace
+# Log file: /home/student/pzieba/UEC2/UEC2_LAB2/fpga/build/uart_project.runs/impl_1/top_uart_basys3.vdi
+# Journal file: /home/student/pzieba/UEC2/UEC2_LAB2/fpga/build/uart_project.runs/impl_1/vivado.jou
+# Running On: cadence33, OS: Linux, CPU Frequency: 3900.781 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source top_uart_basys3.tcl -notrace

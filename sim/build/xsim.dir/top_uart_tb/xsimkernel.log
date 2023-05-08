@@ -1,0 +1,4 @@
+Running: xsim.dir/top_uart_tb/axsim top_uart_tb -runall
+Design successfully loaded
+Design Loading Memory Usage: 31688 KB (Peak: 31688 KB)
+Design Loading CPU Usage: 1300 ms

@@ -1,0 +1,1 @@
+"work.top_uart_tb" -snapshot "top_uart_tb" -prj "/home/student/pzieba/UEC2/UEC2_LAB2/sim/top_uart/top_uart.prj" -timescale "1ns/1ps" -L "unisims_ver" -standalone -runall 
