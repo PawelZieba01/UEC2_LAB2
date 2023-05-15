@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon May  8 19:26:39 2023
+| Date         : Sat May 13 17:30:53 2023
 | Host         : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_utilization -file top_uart_basys3_utilization_synth.rpt -pb top_uart_basys3_utilization_synth.pb
 | Design       : top_uart_basys3
@@ -28,18 +28,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    1 |     0 |          0 |     20800 | <0.01 |
-|   LUT as Logic          |    1 |     0 |          0 |     20800 | <0.01 |
-|   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |    3 |     0 |          0 |     41600 | <0.01 |
-|   Register as Flip Flop |    3 |     0 |          0 |     41600 | <0.01 |
-|   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| Slice LUTs*                |  126 |     0 |          0 |     20800 |  0.61 |
+|   LUT as Logic             |  110 |     0 |          0 |     20800 |  0.53 |
+|   LUT as Memory            |   16 |     0 |          0 |      9600 |  0.17 |
+|     LUT as Distributed RAM |   16 |     0 |            |           |       |
+|     LUT as Shift Register  |    0 |     0 |            |           |       |
+| Slice Registers            |  119 |     0 |          0 |     41600 |  0.29 |
+|   Register as Flip Flop    |  119 |     0 |          0 |     41600 |  0.29 |
+|   Register as Latch        |    0 |     0 |          0 |     41600 |  0.00 |
+| F7 Muxes                   |    0 |     0 |          0 |     16300 |  0.00 |
+| F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -55,10 +57,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 2     |          Yes |           - |          Set |
+| 89    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 3     |          Yes |       Reset |            - |
+| 28    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -91,7 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    7 |     0 |          0 |       106 |  6.60 |
+| Bonded IOB                  |   20 |     0 |          0 |       106 | 18.87 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -150,10 +152,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    4 |                  IO |
-| OBUF     |    3 |                  IO |
-| FDRE     |    3 |        Flop & Latch |
-| LUT3     |    1 |                 LUT |
+| FDCE     |   89 |        Flop & Latch |
+| LUT4     |   45 |                 LUT |
+| LUT6     |   35 |                 LUT |
+| FDRE     |   28 |        Flop & Latch |
+| LUT1     |   22 |                 LUT |
+| RAMD32   |   20 |  Distributed Memory |
+| OBUF     |   15 |                  IO |
+| LUT3     |   14 |                 LUT |
+| LUT5     |   12 |                 LUT |
+| LUT2     |   12 |                 LUT |
+| CARRY4   |   10 |          CarryLogic |
+| IBUF     |    5 |                  IO |
+| RAMS32   |    4 |  Distributed Memory |
+| FDPE     |    2 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

@@ -26,13 +26,21 @@ set target xc7a35tcpg236-1
 #-----------------------------------------------------#
 # Specify .xdc files location                   -- EDIT
 set xdc_files {
-    constraints/top_vga_basys3.xdc
+    constraints/top_uart_basys3.xdc
 }
 
 # Specify SystemVerilog design files location   -- EDIT
 set sv_files {
     rtl/top_uart_basys3.sv
     ../rtl/top_uart.sv
+    ../rtl/debounce.v
+    ../rtl/disp_hex_mux.v
+    ../rtl/fifo.v
+    ../rtl/flag_buf.v
+    ../rtl/mod_m_counter.v
+    ../rtl/uart_rx.v
+    ../rtl/uart_tx.v
+    ../rtl/uart.v
 }
 
 # Specify Verilog design files location         -- EDIT

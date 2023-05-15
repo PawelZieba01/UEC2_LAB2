@@ -1,38 +1,9 @@
 Warnings, critical warnings and errors from synthesis and implementation
 
-Created: 2023-05-08 19:28:00
+Created: 2023-05-13 17:32:14
 
 ----SYNTHESIS----
-fpga/build/uart_project.runs/synth_1/runme.log:WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-6014] Unused sequential element set_x.inc_reg was removed.  [/home/student/pzieba/UEC2/UEC2_LAB1/rtl/MouseCtl.vhd:450]
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-6014] Unused sequential element set_x.x_inter_reg was removed.  [/home/student/pzieba/UEC2/UEC2_LAB1/rtl/MouseCtl.vhd:456]
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-6014] Unused sequential element set_y.inc_reg was removed.  [/home/student/pzieba/UEC2/UEC2_LAB1/rtl/MouseCtl.vhd:514]
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-6014] Unused sequential element set_y.y_inter_reg was removed.  [/home/student/pzieba/UEC2/UEC2_LAB1/rtl/MouseCtl.vhd:520]
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[11] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[10] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[9] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[8] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[7] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[6] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[5] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[4] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[3] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[2] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[1] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[0] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[11] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[10] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[9] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[8] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[7] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[6] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[5] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[4] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[3] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[2] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[1] in module draw_bg is either unconnected or has no load
-fpga/build/vga_project.runs/synth_1/runme.log:WARNING: [Synth 8-7129] Port in\.rgb[0] in module draw_bg is either unconnected or has no load
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 
 ----IMPLEMENTATION----
 CLEAR :)

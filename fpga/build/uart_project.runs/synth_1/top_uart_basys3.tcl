@@ -84,7 +84,14 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/debounce.v
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/disp_hex_mux.v
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/fifo.v
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/mod_m_counter.v
   /home/student/pzieba/UEC2/UEC2_LAB2/rtl/top_uart.sv
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/uart.v
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/uart_rx.v
+  /home/student/pzieba/UEC2/UEC2_LAB2/rtl/uart_tx.v
   /home/student/pzieba/UEC2/UEC2_LAB2/fpga/rtl/top_uart_basys3.sv
 }
 OPTRACE "Adding files" END { }
@@ -96,8 +103,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/student/pzieba/UEC2/UEC2_LAB2/fpga/constraints/top_vga_basys3.xdc
-set_property used_in_implementation false [get_files /home/student/pzieba/UEC2/UEC2_LAB2/fpga/constraints/top_vga_basys3.xdc]
+read_xdc /home/student/pzieba/UEC2/UEC2_LAB2/fpga/constraints/top_uart_basys3.xdc
+set_property used_in_implementation false [get_files /home/student/pzieba/UEC2/UEC2_LAB2/fpga/constraints/top_uart_basys3.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

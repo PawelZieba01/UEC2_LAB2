@@ -2,5 +2,9 @@
 2020.2
 Oct 19 2021
 02:56:52
-/home/student/pzieba/UEC2/UEC2_LAB1/rtl/delay.v,1681999381,systemVerilog,,,,delay,,,,,,,,
-/home/student/pzieba/UEC2/UEC2_LAB2/sim/common/glbl.v,1683408228,systemVerilog,,,,glbl,,,,,,,,
+/home/student/pzieba/UEC2/UEC2_LAB2/rtl/debounce.v,1457468548,systemVerilog,,,,debounce,,,,,,,,
+/home/student/pzieba/UEC2/UEC2_LAB2/rtl/disp_hex_mux.v,1683812767,systemVerilog,,,,disp_hex_mux,,,,,,,,
+/home/student/pzieba/UEC2/UEC2_LAB2/rtl/fifo.v,1683813584,systemVerilog,,,,fifo,,,,,,,,
+/home/student/pzieba/UEC2/UEC2_LAB2/rtl/flag_buf.v,1457468548,systemVerilog,,,,flag_buf,,,,,,,,
+/home/student/pzieba/UEC2/UEC2_LAB2/rtl/uart.v,1457468548,systemVerilog,,,,uart,,,,,,,,
+/home/student/pzieba/UEC2/UEC2_LAB2/rtl/uart_rx.v,1457468548,systemVerilog,,,,uart_rx,,,,,,,,

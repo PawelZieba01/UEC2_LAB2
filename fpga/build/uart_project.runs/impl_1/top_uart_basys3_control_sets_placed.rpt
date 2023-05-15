@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon May  8 19:27:16 2023
+| Date         : Sat May 13 17:31:32 2023
 | Host         : cadence33 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_control_sets -verbose -file top_uart_basys3_control_sets_placed.rpt
 | Design       : top_uart_basys3
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     2 |
-|    Minimum number of control sets                        |     2 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    12 |
+| Unused register locations in slices containing registers |    16 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     2 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     0 |
+| Total control sets |    11 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     0 |
+| >= 8 to < 10       |     3 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     0 |
+| >= 12 to < 14      |     2 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     0 |
+| >= 16              |     3 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,23 +58,32 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               2 |            1 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               2 |            1 |
+| No           | No                    | No                     |               3 |            3 |
+| No           | No                    | Yes                    |              46 |           18 |
+| No           | Yes                   | No                     |              10 |            3 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              45 |           12 |
+| Yes          | Yes                   | No                     |              16 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+---------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |               |                  |                1 |              2 |         2.00 |
-|  clk_IBUF_BUFG |               | btnC_IBUF        |                1 |              2 |         2.00 |
-+----------------+---------------+------------------+------------------+----------------+--------------+
++----------------+----------------------------------------------------+-----------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                    Enable Signal                   |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------------------+-----------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                                    |                             |                3 |              3 |         1.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/uart_rx_unit/s_next              | btnC_IBUF                   |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/uart_tx_unit/s_next              | btnC_IBUF                   |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                                                    | u_top_uart/u_debounce/SR[0] |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/baud_gen_unit/b_next             | btnC_IBUF                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/uart_tx_unit/b_next_0            | btnC_IBUF                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/fifo_tx_unit/wr_en__0            |                             |                2 |             12 |         6.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/uart_rx_unit/wr_en               |                             |                2 |             12 |         6.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_uart/fifo_rx_unit/empty_reg_reg_inv_0 | btnC_IBUF                   |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG | u_top_uart/u_debounce/q_next_0                     | btnC_IBUF                   |                5 |             21 |         4.20 |
+|  clk_IBUF_BUFG |                                                    | btnC_IBUF                   |               20 |             48 |         2.40 |
++----------------+----------------------------------------------------+-----------------------------+------------------+----------------+--------------+
 
 

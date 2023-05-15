@@ -137,7 +137,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/student/pzieba/UEC2/UEC2_LAB2/fpga/build/uart_project.runs/synth_1/top_uart_basys3.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/student/pzieba/UEC2/UEC2_LAB2/fpga/constraints/top_vga_basys3.xdc
+  read_xdc /home/student/pzieba/UEC2/UEC2_LAB2/fpga/constraints/top_uart_basys3.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
